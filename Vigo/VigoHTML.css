@@ -1,0 +1,47 @@
+
+
+.MainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.headerWindow{
+    display: flex;
+    justify-content: space-between;
+    height: 15%;
+    width: 100%;
+    padding: 20px;
+    background-color: #e8544c;
+}
+
+.rightBar{
+    display: flex;
+    gap: 10px;
+    margin: 0 15% 0 15%;
+    text-align: center;
+    align-items: center;
+    width: 30%;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 15%;
+
+}
+
+.icon button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.headerWindow img{
+    width: 25px;
+    height: 25px;
+}
