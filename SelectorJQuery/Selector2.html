@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            //TASK1
+            //$("div p").css("color", "red");
+            //$("#header .item").css("background-color", "yellow");
+
+            //TASK2
+            // $("ul li").css("background-color", "yellow");
+            // $("h2 ~ p").css("color", "yellow");
+
+            //TAKS3
+            //$("p.intro.bold").css("font-size", "20px");
+
+            //TASK4
+            // $("li").first().css("background-color", "yellow");
+            // $("li").last().css("background-color", "yellow");
+            // $("table tr").odd().css("background-color", "yellow");
+            // $("table tr").even().css("background-color", "red");
+
+            //TASK5
+            // $("div:empty").html("HELLO WORLD");
+            // $("p:contains('JQuery')").css("background-color", "red");
+
+            //TASK6
+            // $("[href *='https']").css("background-color", "yellow");
+            // $(":text").css("background-color", "red");
+
+            //TASK7
+            // $(":checkbox").css("border", "2px solid blue");
+            // $("input").click(function(){
+            //     $(":focus").css("border", "3px solid red");
+            // });
+
+            //TASK8
+            // $("ul li:first-child").css("background-color", "red");
+            // $("ul li:nth-last-child(2)").css("background-color", "blue");
+
+            //TASK9
+            $("p").filter(".class1").html("Hello");
+            $("div").find("span").html("Hello");
+        });
+    </script>
+</head>
+<body>
+<!--    Task1-->
+<!--    <div class="container p-4 d-flex flex-row">-->
+<!--        <p>123</p>-->
+<!--        <p>123</p>-->
+<!--        <p>123</p>-->
+<!--        <p>123</p>-->
+<!--        <p>123</p>-->
+<!--        <h3 id="header">-->
+<!--            <p class="item">Hi</p>-->
+<!--        </h3>-->
+<!--    </div>-->
+    <!--Task2-->
+<!--    <div class="container m-3 p-3 d-flex justify-content-center">-->
+<!--        <ul class="list-group">-->
+<!--            <li class="list-group-item ">-->
+<!--                123-->
+<!--            </li>-->
+<!--            <li class="list-group-item">-->
+<!--                123-->
+<!--            </li>-->
+<!--            <li class="list-group-item">-->
+<!--                123-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--        <h2>Hello</h2>-->
+<!--        <p>World</p>-->
+<!--    </div>-->
+    <!--Task3-->
+<!--    <div class="container m-3 p-3 gap-3 d-flex flex-row align-items-center">-->
+<!--        <p class="intro bold">Hello</p>-->
+<!--        <p class="intro bold">123</p>-->
+<!--    </div>-->
+    <!--Task4-->
+<!--    <div class="container m-3 p-3 d-flex justify-content-center flex-row">-->
+<!--        <ul class="list-group">-->
+<!--            <li class="list-group-item">-->
+<!--            </li>-->
+<!--            <li class="list-group-item">-->
+<!--            </li>-->
+<!--            <li class="list-group-item">-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--        <table>-->
+<!--            <tr><td>123</td></tr>-->
+<!--            <tr><td>123</td></tr>-->
+<!--            <tr><td>123</td></tr>-->
+<!--            <tr><td>123</td></tr>-->
+<!--            <tr><td>123</td></tr>-->
+<!--        </table>-->
+<!--    </div>-->
+    <!--Task5-->
+<!--    <div class="container m-3 d-flex flex-row justify-content-center">-->
+<!--        <div></div>-->
+<!--        <p>JQuery</p>-->
+<!--    </div>-->
+    <!--Task6-->
+<!--    <div class="container d-flex m-3 flex-row">-->
+<!--        <a href="https://">1</a>-->
+<!--        <a href="expl"> 2</a>-->
+<!--        <input type="email">-->
+<!--        <input type="text">-->
+<!--    </div>-->
+    <!--Task7-->
+<!--    <div class="container d-flex m-3 flex-row">-->
+<!--        <input type="checkbox"> X-->
+<!--        <input type="text"> Y-->
+<!--    </div>-->
+    <!--Task8-->
+<!--    <div class="container d-flex flex-row">-->
+<!--        <ul class="list-group">-->
+<!--            <li class="list-group-item">-->
+
+<!--            </li>-->
+<!--            <li class="list-group-item">-->
+
+<!--            </li>-->
+<!--            <li class="list-group-item">-->
+
+<!--            </li>-->
+<!--            <li class="list-group-item">-->
+
+<!--            </li>-->
+<!--            <li class="list-group-item">-->
+
+<!--            </li>-->
+<!--            <li class="list-group-item">-->
+
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+    <!--Task9-->
+    <div class="container d-flex flex-row">
+        <p>
+           123
+        </p>
+        <p class="class1">
+            asd
+        </p>
+        <p>
+            zxc
+        </p>
+    </div>
+
+    <div>
+        <p>div. <span>div 1.</span></p>
+    </div>
+
+    <div>
+        <p>div. <span>div 2.</span></p>
+    </div>
+
+    <div>
+        <p>span</p>
+    </div>
+
+</body>
+</html>
