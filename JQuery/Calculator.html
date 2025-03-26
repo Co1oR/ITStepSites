@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+</head>
+<body>
+<div class="container-md d-flex justify-content-center">
+    <div class="calculator bg-primary rounded p-3">
+        <div class="row">
+            <div class="col-12 text-right text-white" id="display">0</div>
+        </div>
+        <div class="row my-2">
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="clearBtn">C</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="divideBtn">/</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="multiplyBtn">*</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="modulusBtn">%</button>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="sevenBtn">7</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="eightBtn">8</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="nineBtn">9</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="minusBtn">-</button>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="fourBtn">4</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="fiveBtn">5</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="sixBtn">6</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="plusBtn">+</button>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="oneBtn">1</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="twoBtn">2</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="threeBtn">3</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="equalsBtn">=</button>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col-6">
+                <button class="btn btn-secondary w-100" id="zeroBtn">0</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" id="dotBtn">.</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-danger w-100 d-flex justify-content-center align-items-center" id="delBtn">DEL</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        let display = $("#display");
+        let currentValue = "";
+        $("#clearBtn").click(function () {
+            currentValue = "";
+            display.text("0");
+        });
+        $("#delBtn").click(function () {
+            currentValue = currentValue.slice(0, -1);
+            if (currentValue === "") {
+                display.text("0");
+            } else {
+                display.text(currentValue);
+            }
+        });
+        $(".btn-secondary").not("#clearBtn, #delBtn, #equalsBtn, #divideBtn, #multiplyBtn, #modulusBtn, #minusBtn, #plusBtn, #dotBtn").click(function () {
+            let value = $(this).text();
+            if (currentValue === "0") {
+                currentValue = value;
+            } else {
+                currentValue += value;
+            }
+            display.text(currentValue);
+        });
+        $("#divideBtn, #multiplyBtn, #modulusBtn, #minusBtn, #plusBtn").click(function () {
+            let operator = $(this).text();
+            currentValue += " " + operator + " ";
+            display.text(currentValue);
+        });
+        $("#dotBtn").click(function () {
+            if (!currentValue.includes(".")) {
+                currentValue += ".";
+                display.text(currentValue);
+            }
+        });
+        $("#equalsBtn").click(function () {
+            try {
+                let result = eval(currentValue);
+                display.text(result);
+                currentValue = result.toString();
+            }
+            catch (e) {
+                display.text("Error");
+                currentValue = "";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
