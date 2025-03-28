@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="DOM.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="DOM.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center p-3">
+            <h1>Мій інтерактивний список справ</h1>
+        </div>
+        <div class="container-md bg-primary p-3">
+            <div class="col-12 gap-3">
+                <ul id="ToDoList" class="list-group">
+
+                </ul>
+                <div class="d-flex justify-content-around pt-3">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <div class="input-group">
+                                <input id="textInput" type="text" placeholder="Card text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button id="addBtn" type="button" class="btn btn-success">Add</button>
+                        </div>
+                    </div>
+                    <button id="deleteBtn" type="button" class="btn btn-success">Delete All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
